@@ -46,7 +46,7 @@ describe("command-palette", () => {
     expect(groups).toHaveLength(2);
   });
 
-  it("renders a cmdk-backed palette", () => {
+  it("renders a grouped command palette", () => {
     const markup = renderToStaticMarkup(
       React.createElement(PlatformCommandPalette, {
         query: "contacts",
@@ -54,7 +54,7 @@ describe("command-palette", () => {
       })
     );
 
-    expect(markup).toContain("Command palette");
+    expect(markup).toContain("awb-command-dialog");
     expect(markup).toContain("Open CRM Contacts");
   });
 });

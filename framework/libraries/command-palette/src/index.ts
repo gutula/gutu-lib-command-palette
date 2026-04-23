@@ -1,4 +1,3 @@
-import { Command } from "cmdk";
 import React from "react";
 
 import { cn } from "@platform/ui";
@@ -79,33 +78,33 @@ export function PlatformCommandPalette(props: {
       "data-testid": "command-dialog"
     },
     React.createElement(
-      Command,
+      "div",
       {
-        label: "Command palette",
         className: "awb-command-host"
       },
-      React.createElement(Command.Input, {
+      React.createElement("input", {
         value: props.query,
         readOnly: true,
         className: "awb-command-query",
         placeholder: "Type a command or jump target"
       }),
       React.createElement(
-        Command.List,
+        "div",
         { className: "awb-command-list" },
         props.items.length === 0
-          ? React.createElement(Command.Empty, { className: "awb-muted-copy" }, props.emptyLabel ?? "No commands available.")
+          ? React.createElement("div", { className: "awb-muted-copy" }, props.emptyLabel ?? "No commands available.")
           : groups.map((group) =>
               React.createElement(
-                Command.Group,
-                { key: group.label, heading: group.label },
+                "section",
+                { key: group.label, className: "awb-command-group", "data-group-label": group.label },
+                React.createElement("h3", { className: "awb-command-group-label" }, group.label),
                 group.items.map((item) =>
                   React.createElement(
-                    Command.Item,
+                    "article",
                     {
                       key: item.id,
-                      value: `${item.label} ${(item.keywords ?? []).join(" ")}`.trim(),
-                      className: cn("awb-command-item")
+                      className: cn("awb-command-item"),
+                      "data-command-value": `${item.label} ${(item.keywords ?? []).join(" ")}`.trim()
                     },
                     React.createElement("div", { className: "awb-command-label" }, item.label),
                     item.hint ? React.createElement("div", { className: "awb-command-hint" }, item.hint) : null
