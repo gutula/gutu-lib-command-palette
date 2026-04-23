@@ -3,6 +3,7 @@ const summary = {
   "repoName": "gutu-lib-command-palette",
   "packageId": "command-palette",
   "displayName": "Command Palette",
+  "packageCount": 1,
   "group": "UI Foundation",
   "maturity": "Baseline",
   "description": "cmdk-backed command palette primitives for governed admin actions.",

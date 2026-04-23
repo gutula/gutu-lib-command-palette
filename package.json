@@ -6,11 +6,11 @@
     "framework/libraries/*"
   ],
   "scripts": {
-    "build": "bun --cwd framework/libraries/command-palette run build",
-    "typecheck": "bun --cwd framework/libraries/command-palette run typecheck",
-    "lint": "bun --cwd framework/libraries/command-palette run lint",
-    "test": "bun --cwd framework/libraries/command-palette run test",
-    "test:unit": "bun --cwd framework/libraries/command-palette run test:unit",
+    "build": "bun run --cwd framework/libraries/command-palette build",
+    "typecheck": "bun run --cwd framework/libraries/command-palette typecheck",
+    "lint": "bun run --cwd framework/libraries/command-palette lint",
+    "test": "bun run --cwd framework/libraries/command-palette test",
+    "test:unit": "bun run --cwd framework/libraries/command-palette test:unit",
     "docs:summary": "node scripts/docs-summary.mjs",
     "docs:check": "node scripts/docs-check.mjs"
   }

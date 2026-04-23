@@ -45,6 +45,7 @@ Why this tier:
 | --- | --- |
 | Package ID | `command-palette` |
 | Import Name | `@platform/command-palette` |
+| Canonical Namespace Target | `@gutu/command-palette` |
 | UI Surface | Mixed runtime helpers |
 | Consumption Model | Imports + typed UI primitives |
 | Verification | Build+Typecheck+Lint+Test |
@@ -54,10 +55,18 @@ Why this tier:
 | Field | Value |
 | --- | --- |
 | Package Name | `@platform/command-palette` |
+| Canonical Namespace Target | `@gutu/command-palette` |
+| Legacy Compatibility IDs | `@platform/command-palette` |
 | Direct Dependencies | `@platform/ui`, `cmdk`, `react` |
 | Peer Dependencies | None |
 | React Runtime | Yes |
 | Workspace Requirement | Compatible Gutu workspace required |
+
+## Namespace Policy
+
+- `@gutu/*` is the canonical public framework namespace for new work.
+- This repo currently publishes `@platform/command-palette` as the legacy compatibility package id while the migration to `@gutu/command-palette` is completed.
+- Catalog metadata carries the canonical target id so dashboards, docs, and future tooling can present one uniform Gutu namespace without breaking current consumers.
 
 ## Capability Matrix
 

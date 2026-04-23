@@ -35,6 +35,7 @@ Provides command-palette primitives and interaction helpers for apps that want a
 | Package ID | `command-palette` |
 | Display Name | Command Palette |
 | Import Name | `@platform/command-palette` |
+| Canonical Namespace Target | `@gutu/command-palette` |
 | Version | `0.1.0` |
 | UI Surface | Mixed runtime helpers |
 | Consumption Model | Imports + typed UI primitives |
@@ -48,6 +49,7 @@ Provides command-palette primitives and interaction helpers for apps that want a
 | Dev Dependencies | None |
 | React Runtime | Yes |
 | Workspace Scoped | Yes |
+| Legacy Compatibility IDs | `@platform/command-palette` |
 
 ### Dependency interpretation
 
